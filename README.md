@@ -14,23 +14,23 @@ For Ubuntu OS, please run ``apt-get update`` first
 Options
 -------
 
-**-c**: Cleanup IPs configuration. If not set it, will setup openbmc simulator environment and start simulator
+**-c**: Cleanup IPs configuration. If not specified, will setup openbmc simulator environment and start simulator
 
-**-d**: Delay response type, supported parameter: random, constant.
+**-d**: Delay response type, supported parameters: ``random`` and ``constant``.
 
-**-t**: Delay response time, must be used with -d. If delay type is random, the parameter is the max value. The delay time will be random between 0 and input pamameter. Format is "xxmxx"
+**-t**: Delay response time, must be used with **-d**. If delay type is ``random``, the parameter specifies the max value. The delay time will be random between 0 and input parameter. Format is "xxmxx"
 
-**-n**: NIC name which want to configure IPs on
+**-n**: NIC name on which to configure IPs
 
-**-r**: IPs want to configure on NIC. The format is as '10.[1|{1.10}].[1|{1..200}].[1|{1..200}]'
+**-r**: IPs to configure on NIC. The format is as '10.[1|{1.10}].[1|{1..200}].[1|{1..200}]'
 
 Example:
 
-Setup environment and Start simulator ``./simulator -n eth0 -r 10.1.1.{1..10}``
+Setup environment and start simulator ``./simulator -n eth0 -r 10.1.1.{1..10}``
 
 Clear environment: ``./simulator -c -n eth0 -r 10.1.1.{1..10}``
 
-Setup environment and Start simulator that will delay response ``./simulator -d random -t 10``
+Setup environment and start simulator that will delay response ``./simulator -d random -t 10``
 
 Node Definition in xCAT
 -----------------------
