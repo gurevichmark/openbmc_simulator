@@ -5,7 +5,7 @@ Supported Arch: PPC64LE
 Install and Start Simulator
 ---------------------------
 
-* Clone this repo
+* Clone this repo ``git clone git@github.com:gurevichmark/openbmc_simulator.git``
 
 * Run ``./simulator [-c] [-d <delay type> -t <delay time(max)>] [-n <NIC> -r <IP range>]`` 
 
